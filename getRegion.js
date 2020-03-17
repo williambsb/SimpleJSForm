@@ -25,13 +25,18 @@ var ageCheck = {
   setTheRegion : function() {
     var selectedRegion = document.getElementById("region").value;
     if (selectedRegion === "1") {
-      this.setMinOrder(29);
+      this.setMinOrder(129);
     } 
-    else if (selectedMonth === "3" ||
-             selectedMonth === "5" || 
-             selectedMonth === "8" ||
-             selectedMonth === "10") {
-      this.setDaysForMonth(30);
+    else if (selectedRegion === "2" {
+             this setMinOrder(229);
+         }
+         else if (selectedRegion === "3" {
+                   this setMinOrder(249);
+              }
+              else {
+                this setMinOrder(299);
+              };
+  
     }
     else {
       this.setDaysForMonth(31);
