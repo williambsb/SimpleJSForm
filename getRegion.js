@@ -2,12 +2,6 @@
 
 var ageCheck = {
   
-  //Set the minimum age and where to redirect to
-  minimumAge : 21,
-  userIsOldEnoughPage : "welcome.html",
-  userNotOldEnoughPage : "http://www.centurycouncil.org/landing",
-
-
   //Leave this stuff alone please :)
 
   start: function() {
@@ -22,10 +16,16 @@ var ageCheck = {
 
   usersBirthday : new Date(),
 
-  setTheMonth : function() {
-    var selectedMonth = document.getElementById("month").value;
-    if (selectedMonth === "1") {
-      this.setDaysForMonth(29);
+  // Use the following values to DRIVE THE CODE 
+  // Region 1 (Brasilia) --> Min Order R$ 129
+  // Region 2 (Sudeste) --> Min Order R$ 229
+  // Region 3 (Sul) --> Min Order R$ 249
+  // Region 4 (Nordeste ) --> Min Order R$ 299
+  
+  setTheRegion : function() {
+    var selectedRegion = document.getElementById("region").value;
+    if (selectedRegion === "1") {
+      this.setMinOrder(29);
     } 
     else if (selectedMonth === "3" ||
              selectedMonth === "5" || 
