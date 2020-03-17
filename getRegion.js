@@ -1,7 +1,6 @@
 
 
 var ageCheck = {
-  
   //Leave this stuff alone please :)
 
   start: function() {
@@ -16,32 +15,28 @@ var ageCheck = {
 
   usersBirthday : new Date(),
 
-  // Use the following values to DRIVE THE CODE 
+  // Use the following values to DRIVE THE CODE
   // Region 1 (Brasilia) --> Min Order R$ 129
   // Region 2 (Sudeste) --> Min Order R$ 229
   // Region 3 (Sul) --> Min Order R$ 249
   // Region 4 (Nordeste ) --> Min Order R$ 299
-  
+
   setTheRegion : function() {
     var selectedRegion = document.getElementById("region").value;
-    if (selectedRegion === "1") {
-      this.setMinOrder(129);
-    } 
-    else if (selectedRegion === "2" {
-             this setMinOrder(229);
-         }
-         else if (selectedRegion === "3" {
-                   this setMinOrder(249);
-              }
-              else {
-                this setMinOrder(299);
-              };
-  
+    switch (selectedRegion) {
+      case 1:
+        setMinOrder(129);
+        break;
+      case 2: 
+        setMinOrder(229);
+        break;
+      case 3: 
+        setMinOrder(269);
+        break;
+      default:
+        setMinOrder(269);
     }
-    else {
-      this.setDaysForMonth(31);
-    };
-  },
+  }
 
   setDaysForMonth : function(x) {
     var daySelectTag = document.getElementsByName('day')[0];
