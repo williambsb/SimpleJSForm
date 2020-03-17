@@ -1,35 +1,26 @@
-ageChecker
-==========
+SimpleJSForm
+============
 
-very basic javascript minimum age checking
+forked from tmock12/ageChecker
 
-##Security
-This isnt a secure way to keep users out of websites with delicate information. For something like an alcohol website restricting users under 21 years of age access, it's does the job. I created it for a site that could only use javascript, html, and css.
+Simple Form to Capture Data triggering a POP UP 
 
-## To change the default settings-
-open up ageChecker.js and at the top of the file you can adjust the minimum age, where to redirect to when the user is old enough, and where to redirect when the user is too young. The defaults looks like-
 
-    minimumAge : 21,
-    userIsOldEnoughPage : "welcome.html",
-    userNotOldEnoughPage : "http://www.centurycouncil.org/landing",
+## Data Structure Usage 
 
-## To set the users birthday on a page
+This Code will help to demonstrate the usage of JavaScript Data Structure 
+  * Array 
+  * Simple Variable 
+  
+## To set the form  on a page
 include ageChecker.js to your html head section -
 
     <script type="text/javascript" src="ageChecker.js"></script>
 
 as of now you must have these fields included in your html file-
 
-    <select name="month" id="month" onchange="ageCheck.setTheMonth()"></select>
-    <select name="day" id="day"></select>
-    <select name="year" id="year"></select>
-    <button id="submit" onclick="ageCheck.start()">Lets do it!</button>
-
-select fields must have appropriate option values underneath them. This will all be
-automated soon...
-The dates in the day section will adjust depending on the month selected. Note that leap years are not currently implemented.
-
-## To check for the age before allowing access to a page
+   
+## To have the POP UP before  allowing access to a page
 include the following in the html head section of any page you want to deny access to younger users-
  
     <script type="text/javascript" src="ageChecker.js"></script>
